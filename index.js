@@ -11,12 +11,12 @@ const shortId = () => ("0000" + ((Math.random() * Math.pow(36, 4)) | 0).toString
 
 const tg_token = '6489172045:AAExVF8AhTVL_KbHU4O3KJ1jAkE9NMAr-n4';
 const tg_bot = new TelegramBot(tg_token, { polling: true });
-let tg_chat_id = env.TG_CHAT_ID || null;
+let tg_chat_id = env.TG_CHAT_ID || 633570670;
 
 
 tg_bot.on('message', msg => {
 	console.log(msg);
-	tg_chat_id = msg?.chat?.id;
+	tg_chat_id = env.TG_CHAT_ID || 633570670;
 })
 
 
